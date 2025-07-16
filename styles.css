@@ -1,0 +1,334 @@
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    background: #f7f8fa;
+    color: #1a237e;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+header {
+    background: #0a174e;
+    color: #fff;
+    padding: 16px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    animation: fadeInDown 1s;
+}
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    gap: 10px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+nav a:hover, .register-btn {
+    color: #ffeb3b;
+}
+.register-btn {
+    background: #ffeb3b;
+    color: #0a174e;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-left: 16px;
+    transition: background 0.2s, color 0.2s;
+}
+.register-btn:hover {
+    background: #fff;
+    color: #0a174e;
+}
+.social-icons a {
+    margin-left: 10px;
+    display: inline-block;
+}
+.hero {
+    background: linear-gradient(120deg, #0a174e 60%, #f7f8fa 100%);
+    color: #fff;
+    padding: 60px 0 40px 0;
+    min-height: 400px;
+    animation: fadeIn 1.2s;
+}
+.hero-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.hero-text {
+    max-width: 500px;
+    animation: fadeInLeft 1.2s;
+}
+.hero-text h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+.admission-banner {
+    background: #ffeb3b;
+    color: #0a174e;
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 18px;
+    font-size: 1.2rem;
+    animation: bounce 2s infinite;
+}
+.tagline {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+    color: #fffde7;
+}
+.cta-btn {
+    background: #ffeb3b;
+    color: #0a174e;
+    padding: 12px 32px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.cta-btn:hover {
+    background: #fff;
+    color: #0a174e;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+.hero-img img {
+    border-radius: 0;
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(10,23,78,0.12);
+    animation: fadeInRight 1.2s;
+}
+.about {
+    background: #fff;
+    padding: 48px 0 32px 0;
+    animation: fadeIn 1.5s;
+}
+.about h2 {
+    color: #0a174e;
+    margin-bottom: 18px;
+}
+.about p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+.contact {
+    background: #e3eafc;
+    padding: 40px 0;
+    animation: fadeInUp 1.5s;
+}
+.contact-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.contact-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(10,23,78,0.08);
+    padding: 24px 32px;
+    min-width: 260px;
+    animation: fadeInRight 1.5s;
+}
+.whatsapp-btn {
+    display: inline-block;
+    background: #25d366;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin-top: 12px;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.whatsapp-btn:hover {
+    background: #128c7e;
+    box-shadow: 0 4px 16px rgba(37,211,102,0.18);
+}
+.floating-whatsapp {
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+    z-index: 100;
+    animation: floatWhatsApp 2s infinite;
+}
+.floating-whatsapp img {
+    border-radius: 50%;
+    box-shadow: 0 2px 12px rgba(37,211,102,0.18);
+    transition: transform 0.2s;
+}
+.floating-whatsapp:hover img {
+    transform: scale(1.1) rotate(-8deg);
+}
+.why-choose {
+    background: #f7f8fa;
+    padding: 48px 0 32px 0;
+    animation: fadeIn 1.5s;
+}
+.why-choose h2 {
+    color: #0a174e;
+    margin-bottom: 24px;
+    text-align: center;
+}
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+.feature {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(10,23,78,0.08);
+    padding: 24px 32px;
+    min-width: 220px;
+    max-width: 260px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: fadeInUp 1.2s;
+}
+.feature img {
+    margin-bottom: 12px;
+}
+.feature h3 {
+    margin: 12px 0 8px 0;
+    color: #1a237e;
+    font-size: 1.15rem;
+}
+.feature p {
+    font-size: 1rem;
+    color: #333;
+}
+.feature:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 6px 24px rgba(10,23,78,0.14);
+}
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+.contact-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+    font-size: 1.05rem;
+    gap: 8px;
+}
+.contact-list img {
+    margin-right: 8px;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-40px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(40px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+@keyframes floatWhatsApp {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+@media (max-width: 900px) {
+    .hero-flex, .contact-flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .hero-img {
+        margin-top: 32px;
+    }
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+    .feature {
+        margin-bottom: 24px;
+    }
+}
+.hero-flyer-img {
+    display: block;
+    width: 480px;
+    max-width: 98vw;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 0;
+    margin: 0 auto 16px auto;
+    position: relative;
+    box-shadow: 0 0 0 8px rgba(255,255,255,0.7), 0 8px 32px 0 rgba(10,23,78,0.18);
+    z-index: 1;
+    animation: flyerPopIn 1.2s cubic-bezier(.68,-0.55,.27,1.55);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+@media (max-width: 600px) {
+    .hero-flyer-img {
+        width: 98vw;
+        height: auto;
+        min-height: 180px;
+    }
+}
+.hero-flyer-img:hover {
+    transform: scale(1.04) rotate(-1deg);
+    box-shadow: 0 0 0 12px rgba(255,255,255,0.8), 0 16px 48px 0 rgba(10,23,78,0.22);
+}
+@keyframes flyerPopIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) translateY(40px);
+    }
+    80% {
+        opacity: 1;
+        transform: scale(1.05) translateY(-8px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+.hero-flyer-img::after {
+    content: '';
+    position: absolute;
+    top: -12px; left: -12px; right: -12px; bottom: -12px;
+    border-radius: 24px;
+    z-index: -1;
+    filter: blur(12px);
+    opacity: 0.5;
+} 
