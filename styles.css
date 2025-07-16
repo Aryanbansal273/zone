@@ -112,11 +112,44 @@ nav a:hover, .register-btn {
     color: #0a174e;
     box-shadow: 0 4px 16px rgba(0,0,0,0.12);
 }
+.hero-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    flex-wrap: wrap;
+    position: relative;
+}
+.hero-flyer-img {
+    display: block;
+    width: 500px;
+    max-width: 98vw;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 0;
+    margin: 0 0 16px 0;
+    position: relative;
+    box-shadow: none;
+    background: none;
+    z-index: 1;
+    animation: flyerPopIn 1.2s cubic-bezier(.68,-0.55,.27,1.55), flyerFloat 4s ease-in-out infinite;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.nurse-vector {
+    display: block;
+    width: 220px;
+    max-width: 40vw;
+    height: 220px;
+    object-fit: contain;
+    margin: 0 0 16px -60px;
+    animation: fadeInRight 1.2s;
+    z-index: 2;
+    background: none;
+}
 .hero-img img {
     border-radius: 0;
-    background: #fff;
-    box-shadow: 0 4px 24px rgba(10,23,78,0.12);
-    animation: fadeInRight 1.2s;
+    background: none;
+    box-shadow: none;
 }
 .about {
     background: #fff;
@@ -283,31 +316,22 @@ nav a:hover, .register-btn {
     .feature {
         margin-bottom: 24px;
     }
-}
-.hero-flyer-img {
-    display: block;
-    width: 480px;
-    max-width: 98vw;
-    height: 320px;
-    object-fit: cover;
-    border-radius: 0;
-    margin: 0 auto 16px auto;
-    position: relative;
-    box-shadow: 0 0 0 8px rgba(255,255,255,0.7), 0 8px 32px 0 rgba(10,23,78,0.18);
-    z-index: 1;
-    animation: flyerPopIn 1.2s cubic-bezier(.68,-0.55,.27,1.55);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-@media (max-width: 600px) {
+    .hero-img {
+        flex-direction: column;
+        gap: 0;
+    }
     .hero-flyer-img {
         width: 98vw;
         height: auto;
         min-height: 180px;
+        max-width: 100vw;
+        margin: 0 auto 8px auto;
     }
-}
-.hero-flyer-img:hover {
-    transform: scale(1.04) rotate(-1deg);
-    box-shadow: 0 0 0 12px rgba(255,255,255,0.8), 0 16px 48px 0 rgba(10,23,78,0.22);
+    .nurse-vector {
+        width: 60vw;
+        height: auto;
+        margin: -40px auto 16px auto;
+    }
 }
 @keyframes flyerPopIn {
     0% {
@@ -321,6 +345,14 @@ nav a:hover, .register-btn {
     100% {
         opacity: 1;
         transform: scale(1) translateY(0);
+    }
+}
+@keyframes flyerFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-18px);
     }
 }
 .hero-flyer-img::after {
