@@ -13,14 +13,30 @@
     <header>
         <div class="container header-flex">
             <div class="logo">
-                <img src="logo.jpg" alt="Nursing Zone Logo" height="50">
-                <span>Nursing Zone</span>
+                <img src="logo.jpg" alt="Nursing Zone Logo" style="height:40px;">
+                Nursing Zone Ambikapur
             </div>
             <nav>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-                <a href="#register" class="register-btn">Register Now</a>
+                <div class="nav-dropdown">
+                    <a href="#courses" class="nav-link" id="coursesDropdownBtn">Courses ▼</a>
+                    <div class="dropdown-content" id="coursesDropdown">
+                        <a href="#">AIIMS Nursing</a>
+                        <a href="#">RRB Nursing</a>
+                        <a href="#">OSSSC Nursing</a>
+                        <a href="#">DSSB Nursing</a>
+                        <a href="#">JIPMER Nursing</a>
+                        <a href="#">ESIC Nursing</a>
+                        <a href="#">MSc Nursing</a>
+                        <a href="#">PBSc Nursing</a>
+                    </div>
+                </div>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#register" class="nav-link">Register</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </nav>
+            <a href="#register" class="register-btn">Register</a>
             <div class="social-icons">
                 <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" height="24"></a>
                 <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Twitter" height="24"></a>
@@ -28,19 +44,24 @@
             </div>
         </div>
     </header>
-    <section class="hero">
-        <div class="container hero-flex">
-            <div class="hero-text">
-                <h1>NURSING ZONE</h1>
-                <div class="admission-banner">2025 ADMISSION NOW OPEN</div>
-                <p class="tagline">Unleash Your Creative Potential!</p>
-                <a href="#register" class="cta-btn">Register Now</a>
-            </div>
-            <div class="hero-img">
-                <img src="Screenshot 2025-07-16 235812.png" alt="Nurse Flyer" class="hero-flyer-img" height="500">
-                <img src="nursing zone.png" alt="Nurse Vector" class="nurse-vector" height="220">
-            </div>
+    <section class="hero-full">
+      <div class="hero-slider" id="heroSlider">
+        <img src="nursing zone.png" alt="Nursing Zone Ambikapur" class="hero-bg-img active">
+        <img src="nursing 1.png" alt="Nursing 1" class="hero-bg-img">
+        <button class="slider-btn prev" onclick="slideHero(-1)">&#10094;</button>
+        <button class="slider-btn next" onclick="slideHero(1)">&#10095;</button>
+      </div>
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <div class="hero-subtitle">
+            NURSING OFFICER EXAM COACHING for AIIMS, RRB, OSSSC, DSSB, JIPMER, ESIC, MSc & PBSc
+          </div>
+          <h1 class="hero-title">NURSING ZONE AMBIKAPUR</h1>
+          <div class="hero-tagline">Connecting your dreams</div>
+          <a href="#courses" class="cta-btn">EXPLORE COURSES</a>
+          <div class="hero-note">OFFLINE & ONLINE CLASSES AVAILABLE</div>
         </div>
+      </div>
     </section>
     <section id="about" class="about">
         <div class="container">
@@ -49,52 +70,210 @@
             <p>We offer a high-quality education system that adheres to international standards for our students.</p>
         </div>
     </section>
-    <section class="why-choose">
-        <div class="container">
-            <h2>Why Choose Us?</h2>
-            <div class="features">
-                <div class="feature">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Expert Faculty" height="48">
-                    <h3>Expert Faculty</h3>
-                    <p>Learn from experienced and dedicated nursing professionals.</p>
-                </div>
-                <div class="feature">
-                    <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="High Success Rate" height="48">
-                    <h3>High Success Rate</h3>
-                    <p>Our students achieve top results and secure high-paying jobs.</p>
-                </div>
-                <div class="feature">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Global Standards" height="48">
-                    <h3>Global Standards</h3>
-                    <p>We follow international standards for nursing education.</p>
-                </div>
-                <div class="feature">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" alt="Medical Care" height="48">
-                    <h3>Medical Care</h3>
-                    <p>Comprehensive support and guidance for your nursing career.</p>
-                </div>
-            </div>
+    <!-- Features Section (Why Choose Us) -->
+    <section class="why-choose" id="features">
+      <div class="container">
+        <h2>Why Choose Us?</h2>
+        <div class="features">
+          <div class="feature">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Experienced Faculty" height="48">
+            <h3>Experienced Faculty</h3>
+            <p>Learn from highly qualified and experienced teachers.</p>
+          </div>
+          <div class="feature">
+            <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Modern Classrooms" height="48">
+            <h3>Modern Classrooms</h3>
+            <p>State-of-the-art classrooms for a better learning experience.</p>
+          </div>
+          <div class="feature">
+            <img src="https://cdn-icons-png.flaticon.com/512/1046/1046857.png" alt="Hostel Facility" height="48">
+            <h3>Hostel Facility</h3>
+            <p>Comfortable and secure hostel accommodation for students.</p>
+          </div>
+          <div class="feature">
+            <img src="https://cdn-icons-png.flaticon.com/512/2991/2991108.png" alt="Library" height="48">
+            <h3>Library</h3>
+            <p>Access to a well-stocked library with the latest study materials.</p>
+          </div>
+          <div class="feature">
+            <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png" alt="Online & Offline Classes" height="48">
+            <h3>Online & Offline Classes</h3>
+            <p>Flexible learning options to suit your needs.</p>
+          </div>
+          <div class="feature">
+            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Regular Mock Tests" height="48">
+            <h3>Regular Mock Tests</h3>
+            <p>Frequent mock tests to track your progress and boost confidence.</p>
+          </div>
+          <div class="feature">
+            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="Career Guidance" height="48">
+            <h3>Career Guidance</h3>
+            <p>Personalized career counseling and guidance for every student.</p>
+          </div>
+          <div class="feature">
+            <img src="https://cdn-icons-png.flaticon.com/512/1827/1827504.png" alt="24/7 Support" height="48">
+            <h3>24/7 Support</h3>
+            <p>Round-the-clock support for all your academic queries.</p>
+          </div>
         </div>
+      </div>
     </section>
-    <section id="contact" class="contact">
-        <div class="container contact-flex">
-            <div>
-                <h2>Contact Us</h2>
-                <ul class="contact-list">
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone" height="20"> <strong>Phone:</strong> <a href="tel:+918770880559">+91 8770880559</a></li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" height="20"> <strong>Email:</strong> <a href="mailto:nursingzone25@gmail.com">nursingzone25@gmail.com</a></li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Address" height="20"> <strong>Address:</strong> Opposite Manjush Academy, Ambikapur, Chhattisgarh</li>
-                </ul>
-            </div>
-            <div class="contact-card">
-                <h3>Quick Contact</h3>
-                <a href="https://wa.me/918770880559" target="_blank" class="whatsapp-btn">Chat on WhatsApp</a>
-            </div>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+      <div class="container">
+        <h2>Our Infrastructure Gallery</h2>
+        <div class="gallery-grid">
+          <img src="nursing zone.png" alt="Nursing Zone Building" />
+          <img src="Screenshot 2025-07-16 235812.png" alt="Classroom or Event" />
+          <img src="logo.jpg" alt="Nursing Zone Logo" />
         </div>
+      </div>
+    </section>
+    <section class="registration-section" id="register">
+      <div class="registration-bg">
+        <div class="container registration-container">
+          <h2>Register for a Course</h2>
+          <form class="registration-form" id="registrationForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" required>
+              </div>
+              <div class="form-group">
+                <label for="course">Course Name</label>
+                <input type="text" id="course" name="course" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" required>
+              </div>
+              <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                  <option value="">Select</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group" style="flex:1;">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
+              </div>
+            </div>
+            <button type="submit" class="cta-btn" style="margin-top:18px;">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-flex">
+          <div class="contact-card">
+            <ul class="contact-list">
+              <li><strong>Phone:</strong> +91-XXXXXXXXXX</li>
+              <li><strong>Email:</strong> info@nursingzoneambikapur.com</li>
+              <li><strong>Address:</strong> Ambikapur, Chhattisgarh, India</li>
+            </ul>
+            <a href="https://www.google.com/maps/place/Ambikapur,+Chhattisgarh" target="_blank" class="cta-btn" style="margin-top:12px;display:inline-block;">View on Google Maps</a>
+          </div>
+          <div class="contact-card" style="padding:0;overflow:hidden;min-width:320px;">
+            <iframe src="https://www.google.com/maps?q=Ambikapur,+Chhattisgarh,+India&output=embed" width="100%" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
     </section>
     <a href="https://wa.me/918770880559" class="floating-whatsapp" target="_blank" title="Chat on WhatsApp">
         <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" height="48">
     </a>
     <script src="script.js"></script>
+    <script>
+// Highlight nav link on scroll
+window.addEventListener('scroll', function() {
+  const sections = ['about', 'register', 'contact'];
+  let current = '';
+  const scrollY = window.scrollY + 120;
+  sections.forEach(id => {
+    const section = document.getElementById(id);
+    if (section && section.offsetTop <= scrollY) {
+      current = id;
+    }
+  });
+  document.querySelectorAll('nav .nav-link').forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
+    }
+  });
+});
+
+// Dropdown toggle for Courses
+const coursesBtn = document.getElementById('coursesDropdownBtn');
+const coursesDropdown = document.getElementById('coursesDropdown');
+coursesBtn.addEventListener('mouseenter', () => {
+  coursesDropdown.style.display = 'block';
+});
+coursesBtn.addEventListener('mouseleave', () => {
+  setTimeout(() => { coursesDropdown.style.display = 'none'; }, 200);
+});
+coursesDropdown.addEventListener('mouseenter', () => {
+  coursesDropdown.style.display = 'block';
+});
+coursesDropdown.addEventListener('mouseleave', () => {
+  coursesDropdown.style.display = 'none';
+});
+
+document.getElementById('registrationForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  // Replace with your WhatsApp number (with country code, no + or spaces)
+  var phoneNumber = '918770880559';
+  var firstName = document.getElementById('firstName').value.trim();
+  var lastName = document.getElementById('lastName').value.trim();
+  var location = document.getElementById('location').value.trim();
+  var course = document.getElementById('course').value.trim();
+  var address = document.getElementById('address').value.trim();
+  var gender = document.getElementById('gender').value;
+  var phone = document.getElementById('phone').value.trim();
+  var message =
+    'New Registration from Website:%0A' +
+    'First Name: ' + firstName + '%0A' +
+    'Last Name: ' + lastName + '%0A' +
+    'Location: ' + location + '%0A' +
+    'Course Name: ' + course + '%0A' +
+    'Address: ' + address + '%0A' +
+    'Gender: ' + gender + '%0A' +
+    'Phone Number: ' + phone;
+  var url = 'https://wa.me/' + phoneNumber + '?text=' + message;
+  window.open(url, '_blank');
+});
+
+let heroIndex = 0;
+const heroImgs = document.querySelectorAll('.hero-slider .hero-bg-img');
+function showHeroSlide(n) {
+  heroImgs.forEach((img, i) => img.classList.toggle('active', i === n));
+}
+function slideHero(dir) {
+  heroIndex = (heroIndex + dir + heroImgs.length) % heroImgs.length;
+  showHeroSlide(heroIndex);
+}
+setInterval(() => { slideHero(1); }, 5000);
+showHeroSlide(heroIndex);
+</script>
 </body>
 </html>
